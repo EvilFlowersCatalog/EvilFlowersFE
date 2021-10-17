@@ -1,0 +1,5 @@
+"*.{ts,js}":
+  - 'organize-imports-cli'
+  - 'prettier --write'
+"*.{html,css,scss,json,md}":
+  - 'prettier --write'

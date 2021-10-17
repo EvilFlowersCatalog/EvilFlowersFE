@@ -1,0 +1,29 @@
+printWidth: 140
+endOfLine: "lf"
+singleQuote: true
+tabWidth: 4
+trailingComma: "es5"
+bracketSpacing: true
+semi: true
+arrowParens: "avoid"
+parser: "typescript"
+overrides:
+  - files: "*.scss"
+    options:
+      singleQuote: false
+      tabWidth: 2
+      parser: "scss"
+  - files:
+      - "*.json"
+      - ".huskyrc"
+    options:
+      tabWidth: 2
+      parser: "json"
+  - files:
+      - ".prettierrc"
+      - ".lintstagedrc"
+    options:
+      parser: "yaml"
+  - files: "*.html"
+    options:
+      parser: "angular"
