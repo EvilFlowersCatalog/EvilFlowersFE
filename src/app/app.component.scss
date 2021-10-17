@@ -1,0 +1,21 @@
+.app-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.app-mobile-sidenav {
+  width: 100%;
+}
+
+.app-content {
+  padding-top: 64px;
+  min-height: 100vh !important;
+}
+
+@media screen and (max-width: 599px) {
+  .app-content {
+    padding-top: 56px;
+  }
+}

@@ -1,0 +1,15 @@
+<ng-container *transloco="let t">
+    <div fxLayout="column" fxLayoutAlign="center center" fxFill class="not-found-container">
+        <div fxLayout="row" fxLayoutAlign="center" fxFill>
+            <mat-card fxLayout="row" fxLayoutAlign="center" fxFlex="30" fxFlex.lt-md="95" class="not-found-card">
+                <mat-card-content fxLayout="column" fxFill fxLayoutAlign="start">
+                    <h1>404</h1>
+                    <p>{{ t('notFound.pageNotFound') }}</p>
+                    <div fxLayout="row" fxLayoutAlign="end">
+                        <button mat-button color="accent" routerLink="/" class="not-found-button">{{ t('notFound.goBack') }}</button>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</ng-container>

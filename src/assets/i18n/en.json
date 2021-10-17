@@ -1,1 +1,6 @@
-{}
+{
+  "notFound": {
+    "pageNotFound": "Page not found",
+    "goBack": "Go back"
+  }
+}
