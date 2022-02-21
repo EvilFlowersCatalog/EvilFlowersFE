@@ -12,12 +12,9 @@ export class StateService {
 
     constructor(private localStorageService: LocalStorageService) {
         const defaultState = {
-            isLoggedIn: false,
-            token: null,
-            username: null,
-            userId: null,
+            accessToken: null,
+            refreshToken: null,
             lang: 'en',
-            sidenav: false,
         };
 
         let initState = JSON.parse(this.localStorageService.getItem('state'));
@@ -56,11 +53,8 @@ export class StateService {
 
     logoutResetState() {
         this.patchState({
-            isLoggedIn: false,
-            token: null,
-            username: null,
-            userId: null,
-            sidenav: false,
+            accessToken: null,
+            refreshToken: null,
         });
     }
 }

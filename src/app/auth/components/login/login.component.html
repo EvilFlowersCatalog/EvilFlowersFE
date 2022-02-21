@@ -1,0 +1,35 @@
+<ng-container *transloco="let t">
+    <main class="main-content">
+        <div fxFlexFill fxLayout="column">
+            <div fxLayout="row" fxLayoutAlign="center center" fxFill>
+                <mat-card fxFlex="40" fxFlex.lt-md="90" fxLayout="column" fxLayoutGap="16px">
+                    <mat-card-title>{{ t('login.loginTitle') }}</mat-card-title>
+                    <form [formGroup]="loginForm" (submit)="submit()" fxLayoutAlign="stretch" fxLayout="column" fxLayoutGap="16px">
+                        <mat-form-field>
+                            <mat-label>{{ t('login.usernameLabel') }}</mat-label>
+                            <input matInput formControlName="username" type="email" />
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-label>{{ t('login.passwordLabel') }}</mat-label>
+                            <input matInput formControlName="password" [type]="hidePassword ? 'password' : 'text'" />
+                            <button
+                                mat-icon-button
+                                matSuffix
+                                (click)="hidePassword = !hidePassword"
+                                [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="hidePassword"
+                            >
+                                <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                        <div fxLayout="row" fxLayoutAlign="end center">
+                            <button mat-raised-button color="accent" type="submit" [disabled]="loginForm.invalid">
+                                {{ t('login.loginBtn') }}
+                            </button>
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </main>
+</ng-container>

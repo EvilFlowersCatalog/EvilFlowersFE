@@ -14,7 +14,7 @@ export class HttpRequestInterceptor implements HttpInterceptor {
         if (request.context.get(BYPASS_LOADING) === false) {
             this.loadingService.showLoading();
         }
-        const authToken = this.stateService.getStateSnapshot().token;
+        const authToken = this.stateService.getStateSnapshot().accessToken;
         // const isApiRequest = request.urlWithParams.startsWith(environment.baseUrl);
         const options = {
             headers: authToken ? request.headers.set('Authorization', `Bearer ${authToken}`) : request.headers,

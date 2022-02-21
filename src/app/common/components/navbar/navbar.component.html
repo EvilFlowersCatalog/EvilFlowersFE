@@ -1,0 +1,35 @@
+<ng-container *transloco="let t; read: 'navbar'">
+    <!-- <ng-container *ngIf="appState$ | async as appState"> -->
+    <mat-toolbar color="primary">
+        <button mat-flat-button routerLink="/" color="primary"><h2>EvilFlowers</h2></button>
+        <span class="navbar-spacer"></span>
+        <button mat-flat-button color="primary">My collection</button>
+        <button mat-flat-button color="primary">Manage</button>
+
+        <button mat-flat-button [matMenuTriggerFor]="profileMenu" #profileMenuTrigger="matMenuTrigger" color="primary">
+            <mat-icon class="navbar-icon">person_outline</mat-icon>
+        </button>
+    </mat-toolbar>
+
+    <mat-menu #profileMenu="matMenu">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px" mat-menu-item>
+            <mat-icon>translate</mat-icon>
+            <mat-form-field appearance="standard" style="width: 100px">
+                <mat-select (click)="$event.stopPropagation(); ($event.preventDefault)" (selectionChange)="closeMe(profileMenuTrigger)">
+                    <mat-option *ngFor="let lang of languages" [value]="lang">
+                        {{ lang }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <button mat-menu-item routerLink="/">
+            <mat-icon>account_circle</mat-icon>
+            <span>{{ t('profile') }}</span>
+        </button>
+        <button mat-menu-item (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            <span>{{ t('log-out') }}</span>
+        </button>
+    </mat-menu>
+    <!-- </ng-container> -->
+</ng-container>

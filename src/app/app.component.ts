@@ -14,7 +14,6 @@ import { State } from './common/types/state.types';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent extends DisposableComponent {
-    sidenavState: boolean;
     windowStoreChange$: Observable<any>;
 
     constructor(
@@ -32,7 +31,6 @@ export class AppComponent extends DisposableComponent {
             .getState$()
             .pipe(takeUntil(this.destroySignal$))
             .subscribe((data: State) => {
-                this.sidenavState = data.sidenav;
                 this.langService.setActiveLang(data.lang);
             });
         this.loadingService.loadingStatus$

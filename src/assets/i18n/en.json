@@ -2,5 +2,13 @@
   "notFound": {
     "pageNotFound": "Page not found",
     "goBack": "Go back"
+  },
+  "login": {
+    "loginTitle": "Login",
+    "usernameLabel": "Username",
+    "passwordLabel": "Password",
+    "loginBtn": "Login",
+    "loginSuccessMessage": "Login successful",
+    "loginErrorMessage": "Invalid credentials"
   }
 }

@@ -1,13 +1,6 @@
-<div>
-    <!-- <app-header class="app-header"></app-header> -->
-    <mat-sidenav-container>
-        <mat-sidenav mode="over" [opened]="sidenavState" class="app-mobile-sidenav">
-            <!-- <app-mobile-sidenav></app-mobile-sidenav> -->
-        </mat-sidenav>
-        <mat-sidenav-content>
-            <div class="app-content">
-                <router-outlet></router-outlet>
-            </div>
-        </mat-sidenav-content>
-    </mat-sidenav-container>
+<div class="app-wrapper">
+    <ef-navbar class="mat-elevation-z6 app-header"></ef-navbar>
+    <div fxFill class="app-content">
+        <router-outlet></router-outlet>
+    </div>
 </div>

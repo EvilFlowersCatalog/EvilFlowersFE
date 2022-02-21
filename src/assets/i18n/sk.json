@@ -2,5 +2,13 @@
   "notFound": {
     "pageNotFound": "Stránka sa nenašla",
     "goBack": "Späť"
+  },
+  "login": {
+    "loginTitle": "Prihlásenie",
+    "usernameLabel": "Používateľské meno",
+    "passwordLabel": "Heslo",
+    "loginBtn": "Prihlásiť",
+    "loginSuccessMessage": "Prihásenie úspešné",
+    "loginErrorMessage": "Nesprávne prihlasovacie údaje"
   }
 }

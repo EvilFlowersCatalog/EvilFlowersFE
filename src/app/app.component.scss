@@ -1,21 +1,29 @@
+.app-wrapper {
+  overflow: hidden;
+}
+
 .app-header {
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 3;
-}
-
-.app-mobile-sidenav {
-  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
 
 .app-content {
-  padding-top: 64px;
-  min-height: 100vh !important;
+  position: absolute;
+  margin-top: 64px;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
 }
 
-@media screen and (max-width: 599px) {
+@media (max-width: 959px) {
   .app-content {
-    padding-top: 56px;
+    position: absolute;
+    margin-top: 64px;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
   }
 }
